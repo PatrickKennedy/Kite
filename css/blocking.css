@@ -1,0 +1,20 @@
+body 		{ background-color: teal;}
+#edging 	{ background-color: #1c1c1c;}
+
+#header 	{ }
+#title-bar 	{ background-color: red; }
+#title-icon { background-color: purple; }
+#title 		{ background-color: white; }
+#window-controls { background-color: orange; }
+#minimize	{ background-color: green; }
+#maximize	{ background-color: yellow;}
+#close		{ background-color: red; }
+
+#container 	{ background-color: brown; }
+#content 	{ border-top:1px solid #404040; border-bottom:1px solid #404040; }
+
+#footer 	{ }
+#footer * 	{ }
+#status-bar { background-color: grey; }
+#status 	{ color: white; }
+#resizer 	{ background-color: green; }

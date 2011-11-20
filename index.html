@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>KiteIM</title>
+        <link rel="stylesheet" type="text/css" href="qrc:/css/blocking.css" />
+        <link rel="stylesheet" type="text/css" href="qrc:/css/structure.css" />
+        <link rel="stylesheet" type="text/css" href="qrc:/css/design.css" />
+        <link rel="stylesheet" type="text/css" href="qrc:/css/index.css" />
+
+        <link rel="stylesheet" type="text/css" href="qrc:/css/flex-box.css" />
+        <link rel="stylesheet" type="text/css" href="qrc:/css/ui-theme/jquery-ui-1.8.16.custom.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/blocking.css" />
+		<link rel="stylesheet" type="text/css" href="css/structure.css" />
+		<link rel="stylesheet" type="text/css" href="css/design.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/flex-box.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui-theme/jquery-ui-1.8.16.custom.css" />
+
+        <script src="qrc:/js/jquery-1.7.min.js" type="text/javascript"></script>
+        <script src="qrc:/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+        <script src="qrc:/js/main.js" type="text/javascript"></script>
+        <script src="qrc:/js/snapping.js" type="text/javascript"></script>
+    </head>
+	<body class="hbox">
+	<!--#edging is necessary to properly handle rounded edges-->
+	<div id="edging" class="vbox boxFlex">
+        <div id="header">
+            <div id="title-bar" class="hbox">
+                <div id="title-icon"></div>
+                <div id="title" class="boxFlex">KiteIM - this is really long</div>
+                <div id="window-controls" class="hbox align-center pack-center">
+                    <div id="minimize">_</div>
+                    <div id="close">x</div>
+                </div>
+            </div>
+        </div>
+        <div id="container" class="boxFlex">
+            <div id="content">
+                <div style="color:#fff; padding:10px;">
+						Welcome to the Sky <br />
+                        <div id="new-window">New Window</div>
+						<div id="current-location"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="">
+            <div id="status-bar" class="hbox">
+                <div id="status" class="boxFlex">Status Bar</div>
+                <div id="resizer"></div>
+            </div>
+		</div>
+		</div>
+    </body>
+</html>

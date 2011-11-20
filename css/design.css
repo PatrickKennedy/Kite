@@ -1,0 +1,20 @@
+body 		{ background-color: transparent; }
+#edging 	{ background-color: #1c1c1c; border: solid 1pt; border-top-left-radius: 5pt; border-top-right-radius: 5pt; }
+
+#header 	{ }
+#title-bar 	{ }
+#title-icon { }
+#title 		{ }
+#window-controls { }
+#minimize	{ }
+#maximize	{ }
+#close		{ }
+
+#container 	{ }
+#content 	{ }
+
+#footer 	{ }
+#footer * 	{ }
+#status-bar { }
+#status 	{ }
+#resizer 	{ }
