@@ -17,6 +17,7 @@ public:
 	bool resizing;
 
 	static int snap_distance;
+	static int snap_buffer;
 
 	explicit WebWindowBase(QWidget *parent = 0);
 
