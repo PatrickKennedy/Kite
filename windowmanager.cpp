@@ -8,6 +8,7 @@ WindowManager::WindowManager(WebWindowBase *window)
 					  window->page()->mainFrame(),
 					  window)
 	, window(window)
+	, folded(false)
 	, dragging(false)
 	, resizing(false)
 {
@@ -19,6 +20,19 @@ void WindowManager::minimize() {
 
 void WindowManager::close() {
 	window->close();
+}
+
+void WindowManager::toggle_fold() {
+	if (folded) {
+		folded = false;
+		window->setMinimumHeight(200);
+		window->resize(window->width(), original_height);
+	} else {
+		folded = true;
+		original_height = window->height();
+		window->setMinimumHeight(25);
+		window->resize(window->width(), 25);
+	}
 }
 
 void WindowManager::start_drag() {
