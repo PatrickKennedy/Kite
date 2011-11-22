@@ -10,9 +10,24 @@ class WebWindowBase;
 class WindowManager : public AutomaticBridge
 {
 	Q_OBJECT
+
+	Q_PROPERTY(bool dragging READ get_dragging WRITE set_dragging)
+	Q_PROPERTY(bool resizing READ get_resizing WRITE set_resizing)
+
+	int original_height;
+
 public:
-	WebWindowBase *webwindow;
-	explicit WindowManager(WebWindowBase *webwindow);
+
+	bool dragging;
+	bool get_dragging() const { return dragging; }
+	void set_dragging(bool dragging) { this->dragging = dragging; }
+
+	bool resizing;
+	bool get_resizing() const { return resizing; }
+	void set_resizing(bool resizing) { this->resizing = resizing; }
+
+	WebWindowBase *window;
+	explicit WindowManager(WebWindowBase *window);
 
 signals:
 

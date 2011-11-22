@@ -1,30 +1,34 @@
 #include "windowmanager.h"
 #include "webwindowbase.h"
 
-WindowManager::WindowManager(WebWindowBase *webwindow)
+#include <QDebug>
+
+WindowManager::WindowManager(WebWindowBase *window)
 	: AutomaticBridge("window_manager",
-					  webwindow->page()->mainFrame(),
-					  webwindow)
-	, webwindow(webwindow)
+					  window->page()->mainFrame(),
+					  window)
+	, window(window)
+	, dragging(false)
+	, resizing(false)
 {
 }
 
 void WindowManager::minimize() {
-	webwindow->showMinimized();
+	window->showMinimized();
 }
 
 void WindowManager::close() {
-	webwindow->close();
+	window->close();
 }
 
 void WindowManager::start_drag() {
-	webwindow->dragging = true;
+	dragging = true;
 }
 
 void WindowManager::stop_drag() {
-	webwindow->dragging = false;
+	dragging = false;
 }
 
 void WindowManager::start_resize() {
-	webwindow->resizing = true;
+	resizing = true;
 }

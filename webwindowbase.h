@@ -13,9 +13,6 @@ class WebWindowBase : public QWebView
 	WindowManager window_manager;
 
 public:
-	bool dragging;
-	bool resizing;
-
 	static int snap_distance;
 	static int snap_buffer;
 

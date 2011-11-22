@@ -15,8 +15,6 @@ int WebWindowBase::snap_buffer = 4;
 WebWindowBase::WebWindowBase(QWidget *parent)
 	: QWebView(parent)
 	, window_manager(this)
-	, dragging(false)
-	, resizing(false)
 {
 	setWindowFlags(Qt::FramelessWindowHint);
 	setAttribute(Qt::WA_TranslucentBackground);
@@ -33,7 +31,7 @@ void WebWindowBase::mousePressEvent(QMouseEvent *event) {
 }
 
 void WebWindowBase::mouseMoveEvent(QMouseEvent *event) {
-	if (dragging) {
+	if (window_manager.dragging) {
 		if (event->buttons() & Qt::LeftButton) {
 			QDesktopWidget *screen = QApplication::desktop();
 			QRect screen_rect = screen->screenGeometry(this);
@@ -95,7 +93,7 @@ void WebWindowBase::mouseMoveEvent(QMouseEvent *event) {
 
 			setGeometry(new_rect);
 		}
-	} else if (resizing) {
+	} else if (window_manager.resizing) {
 		if (event->buttons() & Qt::LeftButton) {
 			QPoint move_diff = event->globalPos() - last_mouse_pos;
 			QSize size_diff(move_diff.x(), move_diff.y());
@@ -111,9 +109,9 @@ void WebWindowBase::mouseMoveEvent(QMouseEvent *event) {
 }
 
 void WebWindowBase::mouseReleaseEvent(QMouseEvent *event) {
-	dragging = false;
-	resizing = false;
 	QWebView::mouseReleaseEvent(event);
+	window_manager.dragging = false;
+	window_manager.resizing = false;
 }
 
 void WebWindowBase::mouseDoubleClickEvent(QMouseEvent *event) {
