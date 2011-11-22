@@ -1,3 +1,4 @@
+::-webkit-scrollbar { width: 0; height: 0; }
 body 		{ margin: 0; }
 #edging 	{ margin: 0; }
 
@@ -6,8 +7,8 @@ body 		{ margin: 0; }
 #title-icon { width: 14pt; height: 14pt; margin: 3pt; }
 #title 		{ line-height: 18pt; font-size: 10pt; padding-left: 3pt; -webkit-user-select: none; cursor: default; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #window-controls { width: 28pt; }
-#minimize	{ width: 10pt; height: 10pt; margin: 1pt; }
-#close		{ width: 10pt; height: 10pt; margin: 1pt; }
+#minimize	{ width: 10pt; height: 10pt; margin: 1pt; -webkit-user-select: none; cursor: default; }
+#close		{ width: 10pt; height: 10pt; margin: 1pt; -webkit-user-select: none; cursor: default; }
 
 #container 	{ width: 100%; }
 #content 	{ border-top:1px solid #404040; border-bottom:1px solid #404040; }
